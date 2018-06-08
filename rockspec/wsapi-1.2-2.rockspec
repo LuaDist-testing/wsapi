@@ -1,6 +1,4 @@
--- This file was automatically generated for the LuaDist project.
-
-package = "wsapi"
+package = "WSAPI"
 
 version = "1.2-2"
 
@@ -14,17 +12,11 @@ description = {
   homepage = "http://www.keplerproject.org/wsapi"
 }
 
-dependencies = { "luafilesystem >= 1.4.2" }
+dependencies = { "luafilesystem >= 1.5.0" }
 
--- LuaDist source
 source = {
-  tag = "1.2-2",
-  url = "git://github.com/LuaDist-testing/wsapi.git"
+  url = "http://github.com/downloads/keplerproject/wsapi/wsapi-1.2.tar.gz"
 }
--- Original source
--- source = {
---   url = "http://cloud.github.com/downloads/keplerproject/wsapi/wsapi-1.2.tar.gz"
--- }
 
 build = {
         type = "builtin",
