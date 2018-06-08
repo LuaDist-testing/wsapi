@@ -1,6 +1,6 @@
 package = "WSAPI-FCGI"
 
-version = "1.3.4-1"
+version = "1.4-1"
 
 description = {
   summary = "Lua Web Server API FastCGI Adapter",
@@ -12,7 +12,7 @@ description = {
   homepage = "http://www.keplerproject.org/wsapi"
 }
 
-dependencies = { "wsapi >= 1.3.4", "rings >= 1.2.3", "coxpcall >= 1.13" }
+dependencies = { "wsapi >= 1.4", "rings >= 1.2.3", "coxpcall >= 1.13" }
 
 external_dependencies = {
   platforms = {
@@ -25,7 +25,7 @@ external_dependencies = {
 }
 
 source = {
-  url = "http://github.com/downloads/keplerproject/wsapi/wsapi-1.3.4.tar.gz"
+  url = "http://cloud.github.com/downloads/keplerproject/wsapi/wsapi-1.4.tar.gz"
 }
 
 build = {

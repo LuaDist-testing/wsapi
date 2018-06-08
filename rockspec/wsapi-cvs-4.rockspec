@@ -1,8 +1,6 @@
--- This file was automatically generated for the LuaDist project.
+package = "WSAPI"
 
-package = "wsapi"
-
-version = "1.3.4-1"
+version = "cvs-4"
 
 description = {
   summary = "Lua Web Server API",
@@ -16,15 +14,9 @@ description = {
 
 dependencies = { "luafilesystem >= 1.5.0" }
 
--- LuaDist source
 source = {
-  tag = "1.3.4-1",
-  url = "git://github.com/LuaDist-testing/wsapi.git"
+  url = "git://github.com/keplerproject/wsapi.git"
 }
--- Original source
--- source = {
---   url = "http://github.com/downloads/keplerproject/wsapi/wsapi-1.3.4.tar.gz"
--- }
 
 build = {
   type = "builtin",
@@ -36,6 +28,7 @@ build = {
     ["wsapi.cgi"] = "src/wsapi/cgi.lua",
     ["wsapi.sapi"] = "src/wsapi/sapi.lua",
     ["wsapi.ringer"] = "src/wsapi/ringer.lua",
+    ["wsapi.mock"] = "src/wsapi/mock.lua",
   },
   copy_directories = { "samples", "doc", "tests" },
   install = { bin = { "src/launcher/wsapi.cgi" } }
