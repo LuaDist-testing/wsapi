@@ -2,7 +2,7 @@
 
 package = "wsapi"
 
-version = "1.3.3-1"
+version = "1.3.4-1"
 
 description = {
   summary = "Lua Web Server API",
@@ -18,12 +18,12 @@ dependencies = { "luafilesystem >= 1.5.0" }
 
 -- LuaDist source
 source = {
-  tag = "1.3.3-1",
+  tag = "1.3.4-1",
   url = "git://github.com/LuaDist-testing/wsapi.git"
 }
 -- Original source
 -- source = {
---   url = "http://github.com/downloads/keplerproject/wsapi/wsapi-1.3.3.tar.gz"
+--   url = "http://github.com/downloads/keplerproject/wsapi/wsapi-1.3.4.tar.gz"
 -- }
 
 build = {
