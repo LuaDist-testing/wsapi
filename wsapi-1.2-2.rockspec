@@ -2,7 +2,7 @@
 
 package = "wsapi"
 
-version = "1.2-1"
+version = "1.2-2"
 
 description = {
   summary = "Lua Web Server API",
@@ -18,7 +18,7 @@ dependencies = { "luafilesystem >= 1.4.2" }
 
 -- LuaDist source
 source = {
-  tag = "1.2-1",
+  tag = "1.2-2",
   url = "git://github.com/LuaDist-testing/wsapi.git"
 }
 -- Original source
@@ -27,9 +27,7 @@ source = {
 -- }
 
 build = {
-   platforms = {
-     unix = {
-        type = "module",
+        type = "builtin",
 	modules = {
 	  ["wsapi.common"] = "src/wsapi/common.lua",
 	  ["wsapi.request"] = "src/wsapi/request.lua",
@@ -41,22 +39,4 @@ build = {
 	},
 	copy_directories = { "samples", "doc", "tests" },
 	install = { bin = { "src/launcher/wsapi.cgi" } }
-     },
-     win32 = {
-        type = "make",
-       	build_pass = true,
-        build_target = "cgi",
-        build_variables = {
-         LUA_INCLUDE = "$(LUA_INCDIR)",
-	 LUA_LIB = "$(LUA_LIBDIR)\\lua5.1.lib"
-        },
-   	install_target = "install-rocks",
-   	install_variables = {
-     	  PREFIX  = "$(PREFIX)",
-     	  LUA_BIN = "/usr/bin/env lua",
-     	  LUA_DIR = "$(LUADIR)",
-     	  BIN_DIR = "$(BINDIR)"
-   	},
-     }
-   }
 }
