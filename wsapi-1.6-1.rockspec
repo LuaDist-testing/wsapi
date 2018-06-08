@@ -2,7 +2,7 @@
 
 package = "wsapi"
 
-version = "1.5-1"
+version = "1.6-1"
 
 description = {
   summary = "Lua Web Server API",
@@ -14,21 +14,22 @@ description = {
   homepage = "http://www.keplerproject.org/wsapi"
 }
 
-dependencies = { "luafilesystem >= 1.5.0" }
+dependencies = { "luafilesystem >= 1.6.2" }
 
 -- LuaDist source
 source = {
-  tag = "1.5-1",
+  tag = "1.6-1",
   url = "git://github.com/LuaDist-testing/wsapi.git"
 }
 -- Original source
 -- source = {
---   url = "http://cloud.github.com/downloads/keplerproject/wsapi/wsapi-1.5.tar.gz"
+--   url = "http://www.keplerproject.org/files/wsapi-1.6.tar.gz"
 -- }
 
 build = {
   type = "builtin",
   modules = {
+    ["wsapi"] = "src/wsapi.lua",
     ["wsapi.common"] = "src/wsapi/common.lua",
     ["wsapi.request"] = "src/wsapi/request.lua",
     ["wsapi.response"] = "src/wsapi/response.lua",
