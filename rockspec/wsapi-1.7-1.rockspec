@@ -1,8 +1,6 @@
--- This file was automatically generated for the LuaDist project.
+package = "WSAPI"
 
-package = "wsapi"
-
-version = "1.6.1-1"
+version = "1.7-1"
 
 description = {
   summary = "Lua Web Server API",
@@ -11,20 +9,15 @@ description = {
     that contains the base WSAPI libraries plus the CGI adapters.
   ]],
   license = "MIT/X11",
-  homepage = "http://www.keplerproject.org/wsapi"
+  homepage = "http://github.com/keplerproject/wsapi"
 }
 
-dependencies = { "luafilesystem >= 1.6.2" }
+dependencies = { "luafilesystem >= 1.6.2", "rings >= 1.3.0", "coxpcall >= 1.14" }
 
--- LuaDist source
 source = {
-  tag = "1.6.1-1",
-  url = "git://github.com/LuaDist-testing/wsapi.git"
+  url = "git://github.com/keplerproject/wsapi",
+  tag = "v1.7",
 }
--- Original source
--- source = {
---   url = "http://www.keplerproject.org/files/wsapi-1.6.1.tar.gz"
--- }
 
 build = {
   type = "builtin",
