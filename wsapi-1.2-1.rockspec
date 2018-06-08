@@ -2,29 +2,29 @@
 
 package = "wsapi"
 
-version = "1.1-2"
-
--- LuaDist source
-source = {
-  tag = "1.1-2",
-  url = "git://github.com/LuaDist-testing/wsapi.git"
-}
--- Original source
--- source = {
---   url = "http://luaforge.net/frs/download.php/3935/wsapi-1.1.0.tar.gz",
--- }
+version = "1.2-1"
 
 description = {
   summary = "Lua Web Server API",
   detailed = [[
     WSAPI is an API that abstracts the web server from Lua web applications. This is the rock
-    contains the base WSAPI libraries plus the CGI and Xavante adapters.
+    that contains the base WSAPI libraries plus the CGI adapters.
   ]],
   license = "MIT/X11",
-  homepage = "http://wsapi.luaforge.net"
+  homepage = "http://www.keplerproject.org/wsapi"
 }
 
-dependencies = { }
+dependencies = { "luafilesystem >= 1.4.2" }
+
+-- LuaDist source
+source = {
+  tag = "1.2-1",
+  url = "git://github.com/LuaDist-testing/wsapi.git"
+}
+-- Original source
+-- source = {
+--   url = "http://cloud.github.com/downloads/keplerproject/wsapi/wsapi-1.2.tar.gz"
+-- }
 
 build = {
    platforms = {
@@ -36,12 +36,10 @@ build = {
 	  ["wsapi.response"] = "src/wsapi/response.lua",
 	  ["wsapi.util"] = "src/wsapi/util.lua",
 	  ["wsapi.cgi"] = "src/wsapi/cgi.lua",
-	  ["wsapi.fastcgi"] = "src/wsapi/fastcgi.lua",
-	  ["wsapi.ringer"] = "src/wsapi/ringer.lua",
 	  ["wsapi.sapi"] = "src/wsapi/sapi.lua",
-	  ["wsapi.xavante"] = "src/wsapi/xavante.lua"
+	  ["wsapi.ringer"] = "src/wsapi/ringer.lua",
 	},
-	copy_directories = { "samples", "doc" },
+	copy_directories = { "samples", "doc", "tests" },
 	install = { bin = { "src/launcher/wsapi.cgi" } }
      },
      win32 = {
